@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let sum = 0;
+        const numbers = [40, 10, 18, 20];
+       numbers.forEach(MyFunction);
+        document.getElementById("demo").innerHTML = sum;
+        function MyFunction(item) {
+            sum += item ;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="calcularTriangulo()">Triangulo</button>
+
+    <button onclick="calcularTrapezio()">Trapezio</button>
+    
+    <button onclick="calcularCirculo()">Circulo</button>
+    
+    <button onclick="calcularQuadrado()">Quadrado</button>
+    
+    <script>
+        function calcularTriangulo() {
+            let base = parseFloat(prompt("Digite o valor da base do Triangulo"));
+            let altura = parseFloat(prompt("Digite o valor da altura do Triangulo"));
+            let area = (base * altura) / 2;
+            window.alert(`A area do Triangulo é ${area}`)
+        }
+        function calcularTrapezio() {
+            let baseMaior = parseFloat(prompt("Digite o valor da base maior do Trapezio"));
+            let baseMenor = parseFloat(prompt("Digite o valor da base menor do Trapezio"));
+            let altura = parseFloat(prompt("Digite o valor da altura do Trapezio"));
+            let area = ((baseMaior + baseMenor) * altura) / 2;
+            window.alert(`A area do Trapezio é ${area}`)
+        }
+
+        function calcularCirculo() {
+            let raio = parseFloat(prompt("Digite o valor do raio do Circulo"));
+            let area = Math.PI * raio ** 2;
+            window.alert(`A area do Circulo é ${area}`);
+        }
+        // Dois asteristico (**) é a mesma coisa que o (^) os dois servem para falar que é elevado
+
+        function calcularQuadrado() {
+            let lado = parseFloat(prompt("Digite o valor do lado do Quadrado"));
+            let area = lado ** 2;
+            window.alert(`A area do Quadrado é ${area}`);
+        }
+    </script>
+</body>
+
+</html>

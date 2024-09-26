@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar Menor</title>
+</head>
+
+<body>
+    <h1> Ler 10 numeros e verificar qual é o menor utilizado</h1>
+    <form>
+        <label>Digite um numero:</label><br>
+        <input type="number" id="rec"><br>
+        <button type="button" ID="guar">Guardar</button>
+        <button type="button" onclick="menor()">Identificar Menor</button>
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+
+        let num = [];
+
+        document.getElementById("guar").onclick = function () {
+            let rec = parseFloat(document.getElementById("rec").value);
+            if (!isNaN(rec)) {
+                num.push(rec);
+                document.getElementById("rec").value = "";
+            }
+        }
+
+
+        function menor() {
+            if (num.length > 0) {
+                let menorNum = Math.min(...num) // OS 3 pontos serve para passar em todos os valores do vetor
+
+                document.getElementById("demo").innerText = `Os numeros digitados foram: ${num.join(", ")} \n O menor numero é: ${menorNum}`;
+            } else {
+                document.getElementById("demo").innerText = "Deve digitar pelo menos 1 numero";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
